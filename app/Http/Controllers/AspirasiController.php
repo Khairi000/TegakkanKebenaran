@@ -111,7 +111,7 @@ class AspirasiController extends Controller
 
         $aspirasi->update($data);
 
-        return redirect()->route('aspirasi.show', $aspirasi)
+        return redirect()->route('aspirasi.index', $aspirasi)
             ->with('success', 'Status dan dokumen berhasil diperbarui!');
     }
 

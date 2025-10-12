@@ -11,6 +11,9 @@
       <link rel="preconnect" href="https://fonts.bunny.net">
       <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/logo.ico') }}">
+
       <!-- Scripts -->
       @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -190,11 +193,6 @@
     <div class="login-card">
       <!-- Logo -->
 
-
-      <!-- Header Content -->
-      <h2>Selamat Datang di SAPTA</h2>
-      <p>Sistem Aspirasi Publik Transparan dan Akuntabel</p>
-      <p class="sapta-tagline">Setiap Suara Anda Bernilai dan Berdampak</p>
 
       <!-- Slot Content -->
       {{ $slot }}
