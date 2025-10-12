@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+use App\Models\Komentar;
+
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -76,4 +78,17 @@ class Aspirasi extends Model
     {
         return $this->hasMany(Komentar::class);
     }
+
+    public function komentars()
+    {
+        return $this->hasMany(\App\Models\Komentar::class, 'aspirasi_id');
+    }
+
+    public function diskusis()
+{
+    return $this->hasMany(\App\Models\Diskusi::class);
+}
+
+
+
 }
