@@ -155,20 +155,20 @@
                                         @php
                                             $hasVoted = $aspirasi->voters->contains(auth()->id());
                                         @endphp
-                                        <form action="{{ route('aspirasi.vote', $aspirasi) }}" method="POST" class="inline">
-                                            @csrf
-                                            <button type="submit"
-                                                    class="group inline-flex items-center px-4 py-2 font-medium rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5
-                                                           {{ $hasVoted ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white' }}">
-                                                @if($hasVoted)
-                                                    <i class="fas fa-heart-broken mr-2 transition-transform duration-300 group-hover:scale-110"></i>
-                                                    <span class="transition-all duration-300 group-hover:tracking-wide">Batal Vote</span>
-                                                @else
-                                                    <i class="fas fa-heart mr-2 transition-transform duration-300 group-hover:scale-110"></i>
-                                                    <span class="transition-all duration-300 group-hover:tracking-wide">Vote</span>
-                                                @endif
-                                            </button>
-                                        </form>
+                                       <form action="{{ route('aspirasi.vote', $aspirasi) }}" method="POST" class="inline">
+    @csrf
+    <button type="submit"
+            class="group inline-flex items-center px-4 py-2 font-medium rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5
+                   {{ $hasVoted ? 'bg-red-500 hover:bg-red-600 text-white' : 'bg-purple-500 hover:bg-purple-600 text-white' }}">
+        @if($hasVoted)
+            <i class="fas fa-thumbs-down mr-2 transition-transform duration-300 group-hover:scale-110"></i>
+            <span class="transition-all duration-300 group-hover:tracking-wide">Batal Dukung</span>
+        @else
+            <i class="fas fa-thumbs-up mr-2 transition-transform duration-300 group-hover:scale-110"></i>
+            <span class="transition-all duration-300 group-hover:tracking-wide">Dukung</span>
+        @endif
+    </button>
+</form>
 
                                         {{-- Komentar dengan Modal Overlay --}}
 
