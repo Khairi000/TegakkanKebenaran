@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+use App\Models\Aspirasi;
+
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -31,6 +33,7 @@ class Komentar extends Model
      */
     public function aspirasi()
     {
-        return $this->belongsTo(Aspirasi::class);
+        return $this->belongsTo(\App\Models\Aspirasi::class, 'aspirasi_id');
     }
+
 }

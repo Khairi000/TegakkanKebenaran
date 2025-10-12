@@ -22,11 +22,11 @@ class AspirasiController extends Controller
      */
     public function index(): View
     {
-        $aspirasis = Aspirasi::with('user')
-            ->withCount('voters')
-            ->orderByDesc('voters_count')
+        $aspirasis = Aspirasi::with(['user', 'komentar.user', 'voters'])
+            ->withCount(['voters as votes_count', 'komentar as komentar_count'])
+            ->orderByDesc('votes_count')
             ->orderByDesc('created_at')
-            ->get();
+            ->paginate(10); // Ganti get() dengan paginate() untuk pagination
 
         return view('aspirasi.index', compact('aspirasis'));
     }
