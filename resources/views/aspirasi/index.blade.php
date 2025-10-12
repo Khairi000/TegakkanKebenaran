@@ -279,7 +279,7 @@
                             card.style.display = 'block';
                         } else if (filter === 'populer') {
                             const votes = parseInt(card.getAttribute('data-votes'));
-                            if (votes >= 5) {
+                            if (votes >= 3) {
                                 card.style.display = 'block';
                             } else {
                                 card.style.display = 'none';

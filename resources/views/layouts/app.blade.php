@@ -213,12 +213,19 @@
                             <span>Dashboard</span>
                         </x-responsive-nav-link>
 
-                        <x-responsive-nav-link href="{{ route('aspirasi.index') }}"
-                                               :active="request()->routeIs('aspirasi.*')"
-                                               class="flex items-center space-x-3 px-4 py-3 rounded-lg">
-                            <i class="fas fa-list w-5 text-gray-400"></i>
-                            <span>Aspirasi</span>
-                        </x-responsive-nav-link>
+                         <x-responsive-nav-link href="{{ route('aspirasi.index') }}"
+                           :active="request()->routeIs('aspirasi.*')"
+                           class="flex items-center space-x-3 px-4 py-3 rounded-lg">
+                        <i class="fas fa-paper-plane w-5 text-gray-400"></i>
+                        <span>Aspirasi</span>
+                    </x-responsive-nav-link>
+
+                    <x-responsive-nav-link href="{{ route('diskusi.index') }}"
+                                        :active="request()->routeIs('diskusi.*')"
+                                        class="flex items-center space-x-3 px-4 py-3 rounded-lg">
+                        <i class="fas fa-comments w-5 text-gray-400"></i>
+                        <span>Diskusi</span>
+                    </x-responsive-nav-link>
                     </div>
 
                     <!-- Mobile User Section -->
@@ -277,12 +284,12 @@
                             <img src="{{ asset('images/logo.ico') }}" alt="SAPTA Logo" class="w-6 h-6">
                             <div>
                                 <span class="text-sm font-semibold text-gray-800">SAPTA</span>
-                                <p class="text-xs text-gray-600">Sistem Aspirasi Publik Transparan dan Akuntabel</p>
+                                <p class="text-xs text-gray-600">Sistem Aspirasi Publik Transparan</p>
                             </div>
                         </div>
                         <div class="text-sm text-gray-600 text-center md:text-right">
-                            <p>&copy; {{ date('Y') }} SAPTA. All rights reserved.</p>
-                            <p class="text-xs text-gray-500 mt-1">Setiap Suara Anda Bernilai dan Berdampak</p>
+                            <p>&copy; {{ date('Y') }} SAPTA </p>
+                         <p class="text-xs text-[#2EC4B6] mt-1">Setiap Suara Anda Bernilai dan Berdampak</p>
                         </div>
                     </div>
                 </div>
